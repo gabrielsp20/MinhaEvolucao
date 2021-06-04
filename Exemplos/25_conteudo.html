@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <title>pagina de exemplo estrutura básica </title>
+       <meta charset="uft-8">
+       <meta name="author" content="Gabriel">
+       <meta name="description" content="lista de documentos">
+       <meta name="keywords" content="html5, escola, faculdade">
+    
+       <style>
+           div{
+                border: 3px solid red;
+                padding: 25px;
+                position: relative;
+                margin:25px;
+           }
+           div:before{
+               content: "before:";
+               background:#ccc;
+           }
+           div:after{
+               content: "";
+               background:red;
+               width:25px;
+               height:25px;
+               display:block;
+               position: absolute;
+               bottom:0;
+               right: 0;
+           }
+           
+       </style>
+    
+    </head>
+    <body>
+
+        <div> texto principal da div</div>  
+        
+          <article>
+           <h3>
+               titulo
+           </h3>
+               <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+               <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+               <p>paragrafo <a href="#">Apenas um link com <b>negrito</b></a></p>
+           </article>
+
+           <hr>
+
+           <ul>
+               <li><a href="#">link falso</a></li>
+               <li><a href="#">link falso</a></li>
+               <li><a href="http://serfrontend.com//qq.pdf" target="_blank">link externo</a></li>
+               <li><a href="23_transition.html"title="Veja exercicio anterior">link interno</a></li>
+           </ul>
+
+           <br>
+           <br>
+
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de programação</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .operadores{
+            width: 16em;
+            height: 200px;
+            border: 2px solid black;
+            padding: 10px;
+            position: relative;
+            margin-left: 50%; 
+            transform: translateX(-50%)
+        }
+        button {
+            font-size: 20px;
+            width: 50px;
+            height: 40px;
+            border-radius: 10px;
+            box-shadow: 2px 0 2px black; 
+            margin: 5px;
+        
+            
+
+
+        }
+        .fim {
+            width: 100px;
+            height: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom:10px;
+            font-size: 12px;
+            
+
+        }
+        #output{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+    <div class="operadores">
+        <button onclick="soma()">+</button>
+        <button onclick="subtracao()">-</button>
+        <button onclick="multiplicacao()">*</button>
+        <button onclick="divisao()">/</button>
+        <button class="fim" onclick="fim()">Finalizar programa</button>
+        <div id="output"></div>
+    </div>
+    
+
+    <script>
+        n = parseInt(prompt('Digite um número:'))
+        escreve();
+        function escreve(){
+            output = document.querySelector('#output');
+            output.innerHTML = n;
+        }
+
+        function soma(){
+            s = parseInt(prompt('Digite um número para ver a soma'))
+            n += s;
+            escreve();
+        }
+        function subtracao(){
+            sub = parseInt(prompt('Digite um número para ver a subtração'))
+            n -= sub;
+            escreve();
+        }
+        function multiplicacao(){
+            mult = parseInt(prompt('Digite um número para ver a multiplicação'))
+            n *= mult;
+            escreve();
+        }
+        function divisao(){
+            div = parseInt(prompt('Digite um número para ver a divisão'))
+            n /= div;
+            escreve();
+        }
+        
+        
+
+        
+    </script>
+</body>
+
+</html>

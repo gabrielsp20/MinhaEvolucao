@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <title>pagina de exemplo estrutura básica </title>
+       <meta charset="uft-8">
+       <meta name="author" content="Gabriel">
+       <meta name="description" content="lista de documentos">
+       <meta name="keywords" content="html5, escola, faculdade">
+
+       <style>
+           @keyframes slide{
+               0%, 22%{
+                   transform: translateY(0);
+               }
+               25%, 45%{
+                   transform: translateY(-50vh);
+               }
+               50%, 72%{
+                   transform: translateY(-100vh);
+               }
+               75%, 95%, 100%{
+                   transform: translateY(-150vh);
+               }
+           }
+           body{
+               font-family:sans-serif;
+               color:white;
+               background: #1a1818;
+               margin:0;
+           }
+
+           #slide-externo{
+               width: 80vw;
+               height: 50vh;
+               border: 10px solid white;
+               box-shadow: 0 0 10px black; 
+               margin-left: 10vw;
+               overflow: hidden;
+               box-sizing: border-box;
+            
+           }
+
+           #slide-interno{
+               width: 100%;
+               animation: slide 10s infinite cubic-bezier(.5, -0.73, .59, 1.77);
+               animation-direction: alternate;
+           }
+           #slide-interno img{
+            display: block;
+            height: 50vh;
+            width:100%;
+
+           }
+       </style>
+    </head>
+    <body>
+        <h2>Animation - slideshow</h2>
+        <div id="slide-externo">
+            <div id="slide-interno">
+               <img src="imagens_slideshow/slide1.jpg" alt="dog 1">
+               <img src="imagens_slideshow/slide2.jpg" alt="dog 2">
+               <img src="imagens_slideshow/slide3.jpg" alt="dog 3">
+               <img src="imagens_slideshow/slide4.jpg" alt="dog 4">
+            </div>    
+        </div>
+    
+       
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <title>pagina de exemplo estrutura básica </title>
+       <meta charset="uft-8">
+       <meta name="author" content="Gabriel">
+       <meta name="description" content="lista de documentos">
+       <meta name="keywords" content="html5, escola, faculdade">
+    
+        <style>
+
+            body{
+                font-family:sans-serif;
+            }
+
+            label{
+                margin-right:25px;
+            }
+
+            label span{
+                display: inline-block;
+                width: 60px;
+                height: 30px;
+                background: #ccc;
+                border-radius: 15px;
+            }
+
+            label span::before{
+                content:"";
+                display: block;
+                background:#eee;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin: 5px;
+                transition: all .3s ease-in-out ;
+            }
+
+            label input:checked + span::before{
+                transform: translateX(30px);
+                background:red;
+            }
+            label input:focus + span{
+                box-shadow: 0 0 0 2px red;
+            }
+            input{
+               opacity:0;
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+            }
+
+        </style>
+
+    </head>
+    <body>
+       <h1>Vou ser o melhor programador do mundo</h1>
+
+       <label>
+           <input type="checkbox">
+           <span></span>
+           Politica
+       </label>
+
+       <label>
+            <input type="checkbox">
+            <span></span>
+            Esporte
+        </label> 
+        
+        <label>
+            <input type="checkbox">
+            <span></span>
+            Educação
+        </label>
+
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <title>pagina de exemplo estrutura básica </title>
+       <meta charset="uft-8">
+       <meta name="author" content="Gabriel">
+       <meta name="description" content="lista de documentos">
+       <meta name="keywords" content="html5, escola, faculdade">
+    
+       <style>
+           input[type="checkbox"]{
+                width: 50px;
+                height: 50px;
+           }
+           input[type="checkbox"]:checked{
+                width: 25px;
+                height: 25px;
+           }
+
+           button:disabled{
+                background-color: blue;
+           }
+
+           p{
+               color:red;
+           }
+           p:empty::before{
+                content: "Paragrafo vazio não dá, né!"
+           }
+
+           input[type="text"]:focus{
+               background: #ccc;
+           }
+           input[type="text"]:read-only{
+               background: yellow;
+           }
+
+           a:focus, a:hover, div:focus{
+                background:red;
+           }
+           input::placeholder{
+               color:blue;
+           }
+       </style>
+    </head>
+    <body>
+        <label><input type="checkbox" value="sim"> Aceito o contrato </label>
+        
+        <button>Vai</button>
+        <button disabled>Volta</button>
+
+        <p>paragrafo1</p>
+        <p> </p>
+        <p></p>
+        <hr>
+
+        <input type="text">
+        <input type="text" value="valor inical">
+        <input type="text" value="valor inical" readonly>
+        <input type="text" value="valor inical" disabled>
+        <input type="text" placeholder="valor do placeholder">
+
+        <ul>
+            <li><a href="#">Link falso</a></li>
+            <li><a href="#">Link falso</a></li>
+            <li><a href="#">Link falso</a></li>
+            <li><a href="#">Link falso</a></li>
+        </ul>
+
+        <div tabindex="1">div 1</div>
+        <div tabindex="2">div 2</div>
+        <div tabindex="3">div 3</div>
+       
+    </body>
+</html>

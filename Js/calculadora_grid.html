@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>pagina de exemplo estrutura básica </title>
+    <meta charset="uft-8">
+    <meta name="author" content="Gabriel">
+    <meta name="description" content="lista de documentos">
+    <meta name="keywords" content="html5, escola, faculdade">
+
+    <style>
+        body {
+            font-family: sans-serif;
+
+        }
+
+        #calculadora {
+            width: 200px;
+            background-image: linear-gradient(#b7b7b7, #9c9c9c);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+            margin: 15px auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            grid-template-rows: auto repeat(6, 50px);
+
+
+        }
+
+        button {
+            padding: .2em
+        }
+
+        #display {
+            padding: 10px;
+            font-size: 1.4em;
+            text-align: right;
+            background-image: linear-gradient(#c5c5c5, #e0e0e0);
+            box-shadow: inset 3px 2px 0 white;
+
+            grid-column: 1 / -1;
+            grid-row: 1 / 3;
+            margin-bottom: 0px;
+
+        }
+
+        .mais {
+            background-color: #adadad;
+            grid-row: 6 / 8;
+            grid-column: 4 / 5;
+
+        }
+
+        .zero {
+            background-color: #adadad;
+            grid-column: 1 / 3;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="calculadora">
+        <div id="display"></div>
+
+        <button>AC</button> <button>%</button> <button onclick="calcular('*')">X</button> <button
+            onclick="calcular('/')">/</button>
+        <button onclick="n(7)">7</button> <button onclick="n(8)">8</button> <button onclick="n(9)">9</button>
+        <button onclick="cal('=')">=</button>
+        <button onclick="n(4)">4</button> <button onclick="n(5)">5</button> <button onclick="n(6)">6</button> <button
+            onclick="calcular('-')">-</button>
+        <button onclick="n(1)">1</button> <button onclick="n(2)">2</button> <button onclick="n(3)">3</button> <button
+            class="mais" onclick="calcular('+')">+</button>
+        <button class="zero">0</button> <button>,</button>
+    </div>
+
+    <script>
+        function n(numeros) {
+            switch (numeros) {
+                case 1:
+                    display.innerHTML = 1;
+                    n1 = 1;
+                    break;
+                case 2:
+                    display.innerHTML = 2;
+                    n2 = 2;
+                    break;
+                case 3:
+                    display.innerHTML = 3;
+                    break;
+                case 4:
+                    display.innerHTML = 4;
+                    n4 = 4;
+                    break;
+                case 5:
+                    display.innerHTML = 5;
+                    n5 = 5;
+                    break;
+                    
+                case 6:
+                    display.innerHTML = 6;
+                    break;
+                case 7:
+                    display.innerHTML = 7;
+                    break;
+                case 8:
+                    display.innerHTML = 8;
+                    break;
+                case 9:
+                    display.innerHTML = 9;
+                    break;
+
+
+            }
+        }
+        function calcular(simbolo) {
+            switch (simbolo) {
+                case '+':
+                display.innerHTML = n1 + n2;
+                    break;
+
+                case '-':
+                display.innerHTML = n1 - n2;
+                    break;
+
+                case '*':
+                display.innerHTML = n4 * n5;
+                    break;
+
+                case '/':
+                    n1 /= n;
+                    break;
+
+            }
+        }
+        function cal(calcular){
+            switch(calcular){
+                case '=':
+                    
+
+            }
+        }
+        display = document.querySelector('#display');
+
+    </script>
+
+
+</body>
+
+</html>

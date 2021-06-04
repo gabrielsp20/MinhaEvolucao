@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+       <title>pagina de exemplo estrutura básica </title>
+       <meta charset="uft-8">
+       <meta name="author" content="Gabriel">
+       <meta name="description" content="lista de documentos">
+       <meta name="keywords" content="html5, escola, faculdade">
+       <style>
+           body{
+               background-image: url(Gabriel\ Ferreira.png);
+           }
+           h1{
+               color: white;
+               text-align: center;
+               text-transform: uppercase;
+           }
+           .formLogin legend{
+                display:inline-block;
+                padding:10px;
+                
+                text-transform: uppercase;
+                color:white;
+            }
+
+           .formLogin{
+               width: 250px;
+               margin:50px auto 0;
+               
+           }
+           .formLogin label{
+               margin-top: 15px;
+               display:block;
+               margin-bottom:5px;
+               text-align:center;
+               color:white;
+               
+           }
+           #user, #pass{
+               display: block;
+               width: 100%;
+               box-sizing: border-box;
+               padding:8px;
+               font-size: 18px;
+               border:none;
+           }
+           .btn{
+                margin-top: 15px;
+                padding:5px;
+                width: 50%;
+                margin-left: 25%;
+                text-transform:uppercase;
+            }
+            #user{
+                margin-bottom: 15px
+            }
+            #user, #pass{
+                background:#ddd;
+            }
+            #user:focus, #pass:focus{
+                background: white;
+            }
+       </style>
+    </head>
+    <body>
+        
+    <h1>Gabriel Ferreira</h1>
+
+    <form action="#" method="POST" class="formLogin">
+        <fieldset>
+            <legend>Login</legend>
+
+            <label for="user">Usuario</label>
+            <input type="text" id="user" name="user" autofocus>
+
+            <label for="pass">Digite a senha</label>
+            <input type="password" id="pass" name="pass">
+
+            <input type="submit" value="Logar" class="btn">
+            
+        </fieldset>
+
+    </form>
+       
+    </body>
+</html>
